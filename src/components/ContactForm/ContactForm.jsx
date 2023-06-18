@@ -1,6 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import './ContactForm.css';
+import PropTypes from 'prop-types';
 
 export const ContactForm = ({ onSubmit }) => {
   const handleSubmit = e => {
@@ -33,4 +34,8 @@ export const ContactForm = ({ onSubmit }) => {
       </button>
     </form>
   );
+};
+
+ContactForm.propTypes = {
+  onSubmit: PropTypes.func.isRequired,
 };
